@@ -1,0 +1,35 @@
+<Ui xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Frame name="QuestRewardFrame" parent="UIParent" movable="true" frameStrata="DIALOG">
+        <Size>
+            <AbsDimension x="400" y="400"/>
+        </Size>
+        <Anchors>
+            <Anchor point="CENTER"/>
+        </Anchors>
+        <Backdrop bgFile="Interface/Tooltips/UI-Tooltip-Background">
+            <EdgeFile edgeFile="Interface/Tooltips/UI-Tooltip-Border" edgeSize="16"/>
+        </Backdrop>
+        <Scripts>
+            <OnLoad>
+                self:RegisterForDrag("LeftButton")
+                self:SetScript("OnDragStart", self.StartMoving)
+                self:SetScript("OnDragStop", self.StopMovingOrSizing)
+            </OnLoad>
+        </Scripts>
+        <FontString name="QuestRewardTitle" inherits="GameFontHighlight">
+            <Anchors>
+                <Anchor point="TOP" x="0" y="-10"/>
+            </Anchors>
+            <Text>Quest Rewards</Text>
+        </FontString>
+        <FontString name="QuestRewardList" inherits="GameFontNormal">
+            <Anchors>
+                <Anchor point="TOPLEFT" x="10" y="-30"/>
+            </Anchors>
+            <Size>
+                <AbsDimension x="380" y="340"/>
+            </Size>
+            <JustifyH>LEFT</JustifyH>
+        </FontString>
+    </Frame>
+</Ui>

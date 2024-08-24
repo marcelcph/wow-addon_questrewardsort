@@ -1,0 +1,9 @@
+## Interface: 110002
+## Title: QuestRewardViewer
+## Notes: A simple addon to view quests and rewards
+## Author: YourName
+## Version: 1.0
+## LoadOnDemand: 0
+
+QuestRewardViewer.lua
+QuestRewardViewer.xml
